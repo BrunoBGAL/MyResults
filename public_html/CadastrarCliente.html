@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/miniMR.png">
+    <title>MyResults Cadastro</title>
+
+
+    <style>
+        :root {
+            --primary-color: #a7002c;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #Cadastrar {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        #BGimg {
+            display: flex;
+            justify-content: flex-end;
+            height: 100vh;
+            width: 400vh;
+        }
+
+        .card {
+            background-color: #ff4445;
+            padding: 100px;
+            width: 400px;
+        }
+
+        .card-header,
+        .card-content label {
+            color: #fff;
+            opacity: 0.8;
+            font-size: 15px;
+        }
+
+        .card-header::after {
+            content: "";
+            width: 70px;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            margin-top: -17px;
+            margin-left: -5px;
+        }
+
+        .card-content-area {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .card-content-area input {
+            margin-top: 10px;
+            padding: 0 5px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            outline: none;
+            color: #fff;
+        }
+
+        .card-content-area a {
+            font-size: 30px;
+            opacity: 0.8;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button {
+            padding: 12px 10.48rem;
+            border: 0;
+            background-color: var(--primary-color);
+            display: flex;
+            text-align: center;
+            font-size: 15px;
+            opacity: 0.8;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #850023;
+            transition: 0.1s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="Cadastrar">
+
+        <form class="card" method=GET action="assets/php/SalvarCliente.php">
+            <div class="card-content">
+                <div class="card-content-area">
+                    <a href="index.html">↩</a>
+                    <img src="assets/images/LogoMyResults.png">
+                    <label for="Nome">Nome Completo</label>
+                    <input type="text" name="Nome" id="Nome" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+
+                    <label for="CPF">CPF</label>
+
+                    <input type="text" name="CPF" id="CPF" autocomplete="off">
+
+                </div>
+
+                <div class="card-content-area">
+
+                    <label for="mail">Email</label>
+
+                    <input type="text" name="Email" id="email" autocomplete="off">
+
+                </div>
+
+                <div class="card-content-area">
+
+                    <label for="telefone">Telefone</label>
+
+                    <input type="text" name="Telefone" id="telefone" autocomplete="off">
+
+                </div>
+
+                <div class="card-content-area">
+
+                    <label for="password">Senha</label>
+
+                    <input type="password" name="Senha" id="password" autocomplete="off">
+
+                </div>
+            </div>
+            <div>
+                <button type=submit>Cadastrar</button>
+            </div>
+        </form>
+        <div id="BGimg">
+            <img src="assets/images/BGimg.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
